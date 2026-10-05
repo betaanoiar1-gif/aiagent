@@ -89,7 +89,22 @@
       "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e",
       "status": "FAILED",
       "timestamp": "2026-10-05T20:23:47.486964+00:00"
+    },
+    {
+      "decision": "FAIL",
+      "duration_seconds": 0.011861,
+      "experiment_id": "EXP-000007",
+      "experiment_name": "phase1b-gpu-baseline-recovery-audit",
+      "git_commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+      "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+      "hypothesis": "Determine whether physical GPU hardware accelerator and CUDA runtime can be discovered on host for Phase 1B baseline recovery.",
+      "model_identifier": "Wan-AI/Wan2.1-T2V-1.3B",
+      "path": "research/experiments/EXP-000007",
+      "random_seed": 42,
+      "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e",
+      "status": "FAILED",
+      "timestamp": "2026-10-05T20:39:07.459776+00:00"
     }
   ],
-  "last_index": 6
+  "last_index": 7
 }

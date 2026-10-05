@@ -1,0 +1,20 @@
+2026-10-05 20:39:07 [INFO] research.exp.EXP-000007: === Initializing Experiment: EXP-000007 (phase1b-gpu-baseline-recovery-audit) ===
+2026-10-05 20:39:07 [INFO] research.exp.EXP-000007: Hypothesis: Determine whether physical GPU hardware accelerator and CUDA runtime can be discovered on host for Phase 1B baseline recovery.
+2026-10-05 20:39:07 [INFO] research.exp.EXP-000007: Objective: Empirically evaluate Decision Gate (Path A vs Path B) for Phase 1B real GPU baseline execution.
+2026-10-05 20:39:07 [INFO] research.exp.EXP-000007: Profiling hardware and software environment...
+2026-10-05 20:39:07 [INFO] research.exp.EXP-000007: Experiment record registered in status: CREATED
+2026-10-05 20:39:07 [INFO] research.exp.EXP-000007: Lifecycle transitioned to RUNNING at 2026-10-05T20:39:07.460633+00:00
+2026-10-05 20:39:07 [INFO] research.exp.EXP-000007: Initializing execution engine...
+2026-10-05 20:39:07 [INFO] research.exp.EXP-000007: Loading model weights / specification...
+2026-10-05 20:39:07 [INFO] research.exp.EXP-000007: Model loaded: {'model_identifier': 'Wan-AI/Wan2.1-T2V-1.3B', 'revision': 'main', 'parameter_count': 1000000, 'digest': '5c34b058cb4514f6122e0ab8ea3059557d669eba87c750fe4437baad028f3bee', 'load_time_seconds': 0.010104}
+2026-10-05 20:39:07 [INFO] research.exp.EXP-000007: Executing workload 'hardware_recovery_audit' with seed=42...
+2026-10-05 20:39:07 [ERROR] research.exp.EXP-000007: Experiment FAILED: EnvironmentHardwarePrerequisiteError: Host environment cannot execute baseline model 'Wan-AI/Wan2.1-T2V-1.3B'. Discovered Deficiencies: [Missing physical GPU: detected 0 GPUs, minimum required is 1. | CUDA compiler/runtime unavailable: CUDA compiler/toolkit (nvcc) not found in system PATH. | Insufficient host system RAM: detected 3.85 GB, minimum required is 16.0 GB.]. Per Phase 1 research protocol, CPU-only generation is prohibited because it cannot measure VRAM or GPU compute profile. Execution aborted to preserve empirical validity.
+2026-10-05 20:39:07 [ERROR] research.exp.EXP-000007: Traceback (most recent call last):
+  File "/home/user/aiagent/runtime/runner/runner.py", line 164, in run
+    workload_res = active_engine.execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/aiagent/engines/baseline_engine.py", line 101, in execute
+    raise EnvironmentHardwarePrerequisiteError(
+engines.baseline_engine.EnvironmentHardwarePrerequisiteError: EnvironmentHardwarePrerequisiteError: Host environment cannot execute baseline model 'Wan-AI/Wan2.1-T2V-1.3B'. Discovered Deficiencies: [Missing physical GPU: detected 0 GPUs, minimum required is 1. | CUDA compiler/runtime unavailable: CUDA compiler/toolkit (nvcc) not found in system PATH. | Insufficient host system RAM: detected 3.85 GB, minimum required is 16.0 GB.]. Per Phase 1 research protocol, CPU-only generation is prohibited because it cannot measure VRAM or GPU compute profile. Execution aborted to preserve empirical validity.
+
+2026-10-05 20:39:07 [INFO] research.exp.EXP-000007: Flushing execution logs...

@@ -1,0 +1,48 @@
+{
+  "environment_variables": {
+    "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games",
+    "SHELL": "/bin/bash",
+    "USER": "user"
+  },
+  "git_state": {
+    "branch": "arena/32c43085-aiagent",
+    "commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+    "commit_author": "arena-ai-coding-agent[bot]",
+    "commit_summary": "Initial commit",
+    "commit_timestamp": "2026-10-05T19:58:06+00:00",
+    "dirty_files": [
+      "M README.md",
+      "?? .gitignore",
+      "?? PHASE_0_REPORT.md",
+      "?? PHASE_1_REPORT.md",
+      "?? docs/",
+      "?? engines/",
+      "?? evaluation/",
+      "?? models/",
+      "?? research/",
+      "?? runtime/",
+      "?? scripts/",
+      "?? tests/"
+    ],
+    "is_dirty": true
+  },
+  "installed_packages": {
+    "Pygments": "2.21.0",
+    "iniconfig": "2.3.0",
+    "packaging": "26.3",
+    "pip": "23.0.1",
+    "pluggy": "1.6.0",
+    "psutil": "7.2.2",
+    "pytest": "9.1.1",
+    "setuptools": "66.1.1",
+    "wheel": "0.38.4"
+  },
+  "kernel_version": "6.1.158+",
+  "os_distro": "Debian GNU/Linux 12 (bookworm)",
+  "os_name": "Linux",
+  "os_release": "6.1.158+",
+  "python_executable": "/usr/bin/python3",
+  "python_implementation": "CPython",
+  "python_version": "3.11.2",
+  "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e"
+}
