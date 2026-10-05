@@ -1,0 +1,340 @@
+{
+  "artifacts": {
+    "config.json": {
+      "bytes": 923,
+      "path": "config.json",
+      "sha256": "23fe5d800b57dc32358cabd5c54d9f6f1d9ea9d391eb1d3c6988aaa4bff25c9b"
+    },
+    "environment/hardware.json": {
+      "bytes": 3289,
+      "path": "environment/hardware.json",
+      "sha256": "0314b9732f3c0919c7d77dd811181deeb524fde9996f506116d83256a1b8fdc8"
+    },
+    "environment/software.json": {
+      "bytes": 1170,
+      "path": "environment/software.json",
+      "sha256": "e753f4815a00d6b340983f00398403cbbd925870d3af3cd420ec2fa575d5ec30"
+    },
+    "logs/execution.log": {
+      "bytes": 2046,
+      "path": "logs/execution.log",
+      "sha256": "baa755e23365352446e427249f783ff56b6295e8044dfc42255624f265234897"
+    },
+    "metrics.json": {
+      "bytes": 1539,
+      "path": "metrics.json",
+      "sha256": "59a1611acfc9a8d90a4e92077ec25aef940cfb1e49b51b6bd729ac65ad8ea6a8"
+    },
+    "outputs/output_manifest.json": {
+      "bytes": 369,
+      "path": "outputs/output_manifest.json",
+      "sha256": "f437d5de5ae6593105c437b4136f981d22ded3eb7717a1ef6db87df4ba471fd7"
+    },
+    "outputs/synthetic_feature_map.ppm": {
+      "bytes": 12301,
+      "path": "outputs/synthetic_feature_map.ppm",
+      "sha256": "34705c110a83d134144b4d48c8b50de073926423136ea173bfe1ae903da80ef2"
+    },
+    "report.md": {
+      "bytes": 3763,
+      "path": "report.md",
+      "sha256": "9bd170c7c581cb449043f27dbade89a36463b334539beb355dd595cfdbd99a5a"
+    }
+  },
+  "configuration": {
+    "experiment_id": null,
+    "experiment_name": "phase0-baseline-determinism-run1",
+    "hypothesis": "A pseudo-random synthetic workload executed under seed 42 produces deterministic, bitwise reproducible artifacts across repeated runs.",
+    "input_reference": {},
+    "model_identifier": "synthetic-baseline-model-v0",
+    "model_revision": "rev-phase0-001",
+    "notes": "Reproduction run of experiment 'EXP-000001'. Original commit: 52b32951531347b2c1000a85aa6b343e6f5578a4. Initial baseline trial for Phase 0 research foundation verification.",
+    "objective": "Establish baseline execution telemetry, resource monitoring benchmarks, and artifact layout for Phase 0 validation.",
+    "output_reference": {},
+    "random_seed": 42,
+    "tags": [
+      "phase0",
+      "baseline",
+      "determinism",
+      "reproducibility"
+    ],
+    "workload_params": {
+      "iterations": 2500,
+      "matrix_size": 64
+    },
+    "workload_type": "synthetic_matrix"
+  },
+  "decision": "PASS",
+  "duration_seconds": 0.016375,
+  "end_time": "2026-10-05T20:10:38.790315+00:00",
+  "experiment_id": "EXP-000002",
+  "experiment_name": "phase0-baseline-determinism-run1",
+  "failure_reason": null,
+  "git_branch": "arena/32c43085-aiagent",
+  "git_commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+  "git_is_dirty": true,
+  "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+  "hardware_profile": {
+    "compute_capability": {
+      "reason": "No GPU detected; compute capability unavailable",
+      "status": "unavailable",
+      "value": null
+    },
+    "cpu_cores_logical": {
+      "reason": null,
+      "status": "available",
+      "value": 2
+    },
+    "cpu_cores_physical": {
+      "reason": null,
+      "status": "available",
+      "value": 1
+    },
+    "cpu_model": {
+      "reason": null,
+      "status": "available",
+      "value": "Intel(R) Xeon(R) Processor @ 2.60GHz"
+    },
+    "cuda_version": {
+      "reason": "CUDA compiler/toolkit (nvcc) not found in system PATH",
+      "status": "unavailable",
+      "value": null
+    },
+    "disk_capacity_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 21834924032
+    },
+    "disk_free_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 20677890048
+    },
+    "driver_version": {
+      "reason": "No GPU detected; NVIDIA driver is not loaded",
+      "status": "unavailable",
+      "value": null
+    },
+    "gpu_architecture": {
+      "reason": "No GPU detected; GPU architecture unavailable",
+      "status": "unavailable",
+      "value": null
+    },
+    "gpu_count": {
+      "reason": null,
+      "status": "available",
+      "value": 0
+    },
+    "gpu_name": {
+      "reason": "No NVIDIA GPU detected on this host (nvidia-smi not in PATH and no driver device node)",
+      "status": "unavailable",
+      "value": null
+    },
+    "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+    "host_architecture": {
+      "reason": null,
+      "status": "available",
+      "value": "x86_64"
+    },
+    "kernel_version": {
+      "reason": null,
+      "status": "available",
+      "value": "6.1.158+"
+    },
+    "os_name": {
+      "reason": null,
+      "status": "available",
+      "value": "Linux"
+    },
+    "os_release": {
+      "reason": null,
+      "status": "available",
+      "value": "6.1.158+"
+    },
+    "python_version": {
+      "reason": null,
+      "status": "available",
+      "value": "3.11.2"
+    },
+    "pytorch_version": {
+      "reason": "PyTorch (torch) is not installed in the current Python environment",
+      "status": "unavailable",
+      "value": null
+    },
+    "ram_available_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 3864211456
+    },
+    "ram_total_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 4131278848
+    },
+    "relevant_runtimes": {
+      "NumPy": {
+        "reason": "NumPy (numpy) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "ONNX Runtime": {
+        "reason": "ONNX Runtime (onnxruntime) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "SciPy": {
+        "reason": "SciPy (scipy) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "TensorRT": {
+        "reason": "TensorRT (tensorrt) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "Triton": {
+        "reason": "Triton (triton) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "psutil": {
+        "reason": null,
+        "status": "available",
+        "value": "7.2.2"
+      }
+    },
+    "vram_available_bytes": {
+      "reason": "No GPU detected; VRAM available cannot be probed",
+      "status": "unavailable",
+      "value": null
+    },
+    "vram_total_bytes": {
+      "reason": "No GPU detected; VRAM total cannot be probed",
+      "status": "unavailable",
+      "value": null
+    }
+  },
+  "hypothesis": "A pseudo-random synthetic workload executed under seed 42 produces deterministic, bitwise reproducible artifacts across repeated runs.",
+  "input_reference": {},
+  "logs": {
+    "line_count": 13,
+    "log_file": "logs/execution.log"
+  },
+  "metrics": {
+    "cpu": {
+      "cpu_percent_mean": 0.0,
+      "cpu_percent_peak": 0.0,
+      "system_time_seconds": 0.0,
+      "user_time_seconds": 0.01
+    },
+    "disk": {
+      "artifacts_bytes": 27378,
+      "delta_free_bytes": 20480,
+      "end_free_bytes": 20677849088,
+      "start_free_bytes": 20677869568
+    },
+    "gpu": {
+      "delta_vram_bytes": null,
+      "peak_vram_bytes": null,
+      "reason": "nvidia-smi not found; accelerator telemetry unavailable on this host",
+      "status": "unavailable",
+      "utilization_percent_mean": null,
+      "utilization_percent_peak": null,
+      "vram_end_bytes": null,
+      "vram_start_bytes": null
+    },
+    "memory": {
+      "delta_rss_bytes": 0,
+      "end_rss_bytes": 23293952,
+      "peak_rss_bytes": 23293952,
+      "start_rss_bytes": 23293952,
+      "system_ram_percent_end": 6.5,
+      "system_ram_percent_peak": 6.5,
+      "system_ram_percent_start": 6.5
+    },
+    "sample_count": 1,
+    "time": {
+      "inference_seconds": 0.006291,
+      "model_load_seconds": 0.010084,
+      "overhead_seconds": 0.001581,
+      "post_process_seconds": 0.0,
+      "pre_process_seconds": 0.0,
+      "wall_clock_seconds": 0.015292
+    },
+    "workload_metrics": {
+      "accumulator_sum": 2.526616,
+      "artifact_bytes": 12301,
+      "artifact_path": "research/experiments/EXP-000002/outputs/synthetic_feature_map.ppm",
+      "iterations_completed": 2500,
+      "manifest_path": "research/experiments/EXP-000002/outputs/output_manifest.json",
+      "matrix_size": 64,
+      "output_sha256": "34705c110a83d134144b4d48c8b50de073926423136ea173bfe1ae903da80ef2",
+      "status": "COMPLETED"
+    }
+  },
+  "model_identifier": "synthetic-baseline-model-v0",
+  "model_revision": "rev-phase0-001",
+  "notes": "Reproduction run of experiment 'EXP-000001'. Original commit: 52b32951531347b2c1000a85aa6b343e6f5578a4. Initial baseline trial for Phase 0 research foundation verification.",
+  "objective": "Establish baseline execution telemetry, resource monitoring benchmarks, and artifact layout for Phase 0 validation.",
+  "output_reference": {},
+  "random_seed": 42,
+  "runtime_configuration": {
+    "allow_failure_recovery": true,
+    "deterministic_mode": true,
+    "log_level": "INFO",
+    "output_dir": "research/experiments",
+    "record_hardware": true,
+    "record_software": true,
+    "sample_interval_ms": 50,
+    "save_artifacts": true,
+    "timeout_seconds": 300.0
+  },
+  "software_environment": {
+    "environment_variables": {
+      "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games",
+      "SHELL": "/bin/bash",
+      "USER": "user"
+    },
+    "git_state": {
+      "branch": "arena/32c43085-aiagent",
+      "commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+      "commit_author": "arena-ai-coding-agent[bot]",
+      "commit_summary": "Initial commit",
+      "commit_timestamp": "2026-10-05T19:58:06+00:00",
+      "dirty_files": [
+        "?? engines/",
+        "?? evaluation/",
+        "?? models/",
+        "?? research/",
+        "?? runtime/",
+        "?? scripts/",
+        "?? tests/"
+      ],
+      "is_dirty": true
+    },
+    "installed_packages": {
+      "Pygments": "2.21.0",
+      "iniconfig": "2.3.0",
+      "packaging": "26.3",
+      "pip": "23.0.1",
+      "pluggy": "1.6.0",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "setuptools": "66.1.1",
+      "wheel": "0.38.4"
+    },
+    "kernel_version": "6.1.158+",
+    "os_distro": "Debian GNU/Linux 12 (bookworm)",
+    "os_name": "Linux",
+    "os_release": "6.1.158+",
+    "python_executable": "/usr/bin/python3",
+    "python_implementation": "CPython",
+    "python_version": "3.11.2",
+    "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e"
+  },
+  "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e",
+  "stack_trace": null,
+  "start_time": "2026-10-05T20:10:38.770897+00:00",
+  "status": "COMPLETED",
+  "timestamp": "2026-10-05T20:10:38.769220+00:00"
+}

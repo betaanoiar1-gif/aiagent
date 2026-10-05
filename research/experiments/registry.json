@@ -1,0 +1,50 @@
+{
+  "experiments": [
+    {
+      "decision": "PASS",
+      "duration_seconds": 0.01484,
+      "experiment_id": "EXP-000001",
+      "experiment_name": "phase0-baseline-determinism-run1",
+      "git_commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+      "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+      "hypothesis": "A pseudo-random synthetic workload executed under seed 42 produces deterministic, bitwise reproducible artifacts across repeated runs.",
+      "model_identifier": "synthetic-baseline-model-v0",
+      "path": "research/experiments/EXP-000001",
+      "random_seed": 42,
+      "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-05T20:10:38.715229+00:00"
+    },
+    {
+      "decision": "PASS",
+      "duration_seconds": 0.016375,
+      "experiment_id": "EXP-000002",
+      "experiment_name": "phase0-baseline-determinism-run1",
+      "git_commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+      "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+      "hypothesis": "A pseudo-random synthetic workload executed under seed 42 produces deterministic, bitwise reproducible artifacts across repeated runs.",
+      "model_identifier": "synthetic-baseline-model-v0",
+      "path": "research/experiments/EXP-000002",
+      "random_seed": 42,
+      "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e",
+      "status": "COMPLETED",
+      "timestamp": "2026-10-05T20:10:38.769220+00:00"
+    },
+    {
+      "decision": "FAIL",
+      "duration_seconds": 0.011457,
+      "experiment_id": "EXP-000003",
+      "experiment_name": "phase0-fault-tolerance-verification",
+      "git_commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+      "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+      "hypothesis": "The research harness preserves full failure diagnostics, execution logs, and environment metadata without data loss upon workload abort.",
+      "model_identifier": "synthetic-baseline-model-v0",
+      "path": "research/experiments/EXP-000003",
+      "random_seed": 42,
+      "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e",
+      "status": "FAILED",
+      "timestamp": "2026-10-05T20:10:38.822477+00:00"
+    }
+  ],
+  "last_index": 3
+}

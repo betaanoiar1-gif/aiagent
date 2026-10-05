@@ -1,0 +1,23 @@
+{
+  "experiment_id": null,
+  "experiment_name": "phase0-fault-tolerance-verification",
+  "hypothesis": "The research harness preserves full failure diagnostics, execution logs, and environment metadata without data loss upon workload abort.",
+  "input_reference": {},
+  "model_identifier": "synthetic-baseline-model-v0",
+  "model_revision": "rev-phase0-001",
+  "notes": "Validation trial for failure handling and error diagnostics.",
+  "objective": "Verify fault tolerance, state transition to FAILED, error capture, and stack trace persistence.",
+  "output_reference": {},
+  "random_seed": 42,
+  "tags": [
+    "phase0",
+    "fault_tolerance",
+    "lifecycle_failure"
+  ],
+  "workload_params": {
+    "failure_message": "Host out of memory simulation during tensor matrix multiplication",
+    "failure_step": 128,
+    "simulate_failure": true
+  },
+  "workload_type": "synthetic_matrix"
+}

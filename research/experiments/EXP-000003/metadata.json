@@ -1,0 +1,321 @@
+{
+  "artifacts": {
+    "config.json": {
+      "bytes": 886,
+      "path": "config.json",
+      "sha256": "8643560b16bb077a0be19b8ca1c26c005087510ed662923b8d674d30c0c77124"
+    },
+    "environment/hardware.json": {
+      "bytes": 3289,
+      "path": "environment/hardware.json",
+      "sha256": "2f64e916bdec993b20331d0db8680253b676b1012110d3ca04db312e183f9218"
+    },
+    "environment/software.json": {
+      "bytes": 1170,
+      "path": "environment/software.json",
+      "sha256": "e753f4815a00d6b340983f00398403cbbd925870d3af3cd420ec2fa575d5ec30"
+    },
+    "logs/execution.log": {
+      "bytes": 2108,
+      "path": "logs/execution.log",
+      "sha256": "cc6d8fd646c59a4c53babdf41fc1f05ff22f09965c98e5b3f06820c5d476fd5c"
+    },
+    "metrics.json": {
+      "bytes": 1112,
+      "path": "metrics.json",
+      "sha256": "833e2cd2f9b37af835f5d0ada864100854e80454dcd9a3a7f24f574660f6b01b"
+    },
+    "report.md": {
+      "bytes": 4143,
+      "path": "report.md",
+      "sha256": "e60a1c06b6352237935006007b6a0cd9620370c8e94ade7292ad6f19deb0ac37"
+    }
+  },
+  "configuration": {
+    "experiment_id": null,
+    "experiment_name": "phase0-fault-tolerance-verification",
+    "hypothesis": "The research harness preserves full failure diagnostics, execution logs, and environment metadata without data loss upon workload abort.",
+    "input_reference": {},
+    "model_identifier": "synthetic-baseline-model-v0",
+    "model_revision": "rev-phase0-001",
+    "notes": "Validation trial for failure handling and error diagnostics.",
+    "objective": "Verify fault tolerance, state transition to FAILED, error capture, and stack trace persistence.",
+    "output_reference": {},
+    "random_seed": 42,
+    "tags": [
+      "phase0",
+      "fault_tolerance",
+      "lifecycle_failure"
+    ],
+    "workload_params": {
+      "failure_message": "Host out of memory simulation during tensor matrix multiplication",
+      "failure_step": 128,
+      "simulate_failure": true
+    },
+    "workload_type": "synthetic_matrix"
+  },
+  "decision": "FAIL",
+  "duration_seconds": 0.011457,
+  "end_time": "2026-10-05T20:10:38.840173+00:00",
+  "experiment_id": "EXP-000003",
+  "experiment_name": "phase0-fault-tolerance-verification",
+  "failure_reason": "EngineExecutionFailure: Host out of memory simulation during tensor matrix multiplication",
+  "git_branch": "arena/32c43085-aiagent",
+  "git_commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+  "git_is_dirty": true,
+  "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+  "hardware_profile": {
+    "compute_capability": {
+      "reason": "No GPU detected; compute capability unavailable",
+      "status": "unavailable",
+      "value": null
+    },
+    "cpu_cores_logical": {
+      "reason": null,
+      "status": "available",
+      "value": 2
+    },
+    "cpu_cores_physical": {
+      "reason": null,
+      "status": "available",
+      "value": 1
+    },
+    "cpu_model": {
+      "reason": null,
+      "status": "available",
+      "value": "Intel(R) Xeon(R) Processor @ 2.60GHz"
+    },
+    "cuda_version": {
+      "reason": "CUDA compiler/toolkit (nvcc) not found in system PATH",
+      "status": "unavailable",
+      "value": null
+    },
+    "disk_capacity_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 21834924032
+    },
+    "disk_free_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 20677820416
+    },
+    "driver_version": {
+      "reason": "No GPU detected; NVIDIA driver is not loaded",
+      "status": "unavailable",
+      "value": null
+    },
+    "gpu_architecture": {
+      "reason": "No GPU detected; GPU architecture unavailable",
+      "status": "unavailable",
+      "value": null
+    },
+    "gpu_count": {
+      "reason": null,
+      "status": "available",
+      "value": 0
+    },
+    "gpu_name": {
+      "reason": "No NVIDIA GPU detected on this host (nvidia-smi not in PATH and no driver device node)",
+      "status": "unavailable",
+      "value": null
+    },
+    "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+    "host_architecture": {
+      "reason": null,
+      "status": "available",
+      "value": "x86_64"
+    },
+    "kernel_version": {
+      "reason": null,
+      "status": "available",
+      "value": "6.1.158+"
+    },
+    "os_name": {
+      "reason": null,
+      "status": "available",
+      "value": "Linux"
+    },
+    "os_release": {
+      "reason": null,
+      "status": "available",
+      "value": "6.1.158+"
+    },
+    "python_version": {
+      "reason": null,
+      "status": "available",
+      "value": "3.11.2"
+    },
+    "pytorch_version": {
+      "reason": "PyTorch (torch) is not installed in the current Python environment",
+      "status": "unavailable",
+      "value": null
+    },
+    "ram_available_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 3863744512
+    },
+    "ram_total_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 4131278848
+    },
+    "relevant_runtimes": {
+      "NumPy": {
+        "reason": "NumPy (numpy) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "ONNX Runtime": {
+        "reason": "ONNX Runtime (onnxruntime) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "SciPy": {
+        "reason": "SciPy (scipy) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "TensorRT": {
+        "reason": "TensorRT (tensorrt) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "Triton": {
+        "reason": "Triton (triton) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "psutil": {
+        "reason": null,
+        "status": "available",
+        "value": "7.2.2"
+      }
+    },
+    "vram_available_bytes": {
+      "reason": "No GPU detected; VRAM available cannot be probed",
+      "status": "unavailable",
+      "value": null
+    },
+    "vram_total_bytes": {
+      "reason": "No GPU detected; VRAM total cannot be probed",
+      "status": "unavailable",
+      "value": null
+    }
+  },
+  "hypothesis": "The research harness preserves full failure diagnostics, execution logs, and environment metadata without data loss upon workload abort.",
+  "input_reference": {},
+  "logs": {
+    "line_count": 20,
+    "log_file": "logs/execution.log"
+  },
+  "metrics": {
+    "cpu": {
+      "cpu_percent_mean": 0.0,
+      "cpu_percent_peak": 0.0,
+      "system_time_seconds": 0.0,
+      "user_time_seconds": 0.0
+    },
+    "disk": {
+      "artifacts_bytes": 14028,
+      "delta_free_bytes": 0,
+      "end_free_bytes": 20677799936,
+      "start_free_bytes": 20677799936
+    },
+    "gpu": {
+      "delta_vram_bytes": null,
+      "peak_vram_bytes": null,
+      "reason": "nvidia-smi not found; accelerator telemetry unavailable on this host",
+      "status": "unavailable",
+      "utilization_percent_mean": null,
+      "utilization_percent_peak": null,
+      "vram_end_bytes": null,
+      "vram_start_bytes": null
+    },
+    "memory": {
+      "delta_rss_bytes": 0,
+      "end_rss_bytes": 23293952,
+      "peak_rss_bytes": 23293952,
+      "start_rss_bytes": 23293952,
+      "system_ram_percent_end": 6.5,
+      "system_ram_percent_peak": 6.5,
+      "system_ram_percent_start": 6.5
+    },
+    "sample_count": 1,
+    "time": {
+      "inference_seconds": 0.0,
+      "model_load_seconds": 0.0,
+      "overhead_seconds": 0.001812,
+      "post_process_seconds": 0.0,
+      "pre_process_seconds": 0.0,
+      "wall_clock_seconds": 0.011039
+    },
+    "workload_metrics": {}
+  },
+  "model_identifier": "synthetic-baseline-model-v0",
+  "model_revision": "rev-phase0-001",
+  "notes": "Validation trial for failure handling and error diagnostics.",
+  "objective": "Verify fault tolerance, state transition to FAILED, error capture, and stack trace persistence.",
+  "output_reference": {},
+  "random_seed": 42,
+  "runtime_configuration": {
+    "allow_failure_recovery": true,
+    "deterministic_mode": true,
+    "log_level": "INFO",
+    "output_dir": "research/experiments",
+    "record_hardware": true,
+    "record_software": true,
+    "sample_interval_ms": 50,
+    "save_artifacts": true,
+    "timeout_seconds": 300.0
+  },
+  "software_environment": {
+    "environment_variables": {
+      "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games",
+      "SHELL": "/bin/bash",
+      "USER": "user"
+    },
+    "git_state": {
+      "branch": "arena/32c43085-aiagent",
+      "commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+      "commit_author": "arena-ai-coding-agent[bot]",
+      "commit_summary": "Initial commit",
+      "commit_timestamp": "2026-10-05T19:58:06+00:00",
+      "dirty_files": [
+        "?? engines/",
+        "?? evaluation/",
+        "?? models/",
+        "?? research/",
+        "?? runtime/",
+        "?? scripts/",
+        "?? tests/"
+      ],
+      "is_dirty": true
+    },
+    "installed_packages": {
+      "Pygments": "2.21.0",
+      "iniconfig": "2.3.0",
+      "packaging": "26.3",
+      "pip": "23.0.1",
+      "pluggy": "1.6.0",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "setuptools": "66.1.1",
+      "wheel": "0.38.4"
+    },
+    "kernel_version": "6.1.158+",
+    "os_distro": "Debian GNU/Linux 12 (bookworm)",
+    "os_name": "Linux",
+    "os_release": "6.1.158+",
+    "python_executable": "/usr/bin/python3",
+    "python_implementation": "CPython",
+    "python_version": "3.11.2",
+    "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e"
+  },
+  "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e",
+  "stack_trace": "Traceback (most recent call last):\n  File \"/home/user/aiagent/runtime/runner/runner.py\", line 164, in run\n    workload_res = active_engine.execute(\n                   ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/aiagent/engines/mock_engine.py\", line 49, in execute\n    raise RuntimeError(f\"EngineExecutionFailure: {error_msg}\")\nRuntimeError: EngineExecutionFailure: Host out of memory simulation during tensor matrix multiplication\n",
+  "start_time": "2026-10-05T20:10:38.824969+00:00",
+  "status": "FAILED",
+  "timestamp": "2026-10-05T20:10:38.822477+00:00"
+}

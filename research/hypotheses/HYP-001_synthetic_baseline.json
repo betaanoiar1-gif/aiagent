@@ -1,0 +1,20 @@
+{
+  "hypothesis_id": "HYP-001",
+  "title": "Deterministic Synthetic Execution Parity",
+  "statement": "A pseudo-random linear congruential generator matrix calculation executed under identical seeds produces bitwise identical artifact digests across repeated runs, with wall-clock time variance remaining within normal operating system scheduling bounds.",
+  "independent_variables": [
+    "random_seed",
+    "workload_parameters"
+  ],
+  "dependent_variables": [
+    "output_sha256",
+    "wall_clock_seconds",
+    "peak_rss_bytes"
+  ],
+  "acceptance_criteria": "output_sha256 matching 100% across runs under identical seed.",
+  "status": "VALIDATED",
+  "associated_experiments": [
+    "EXP-000001",
+    "EXP-000002"
+  ]
+}

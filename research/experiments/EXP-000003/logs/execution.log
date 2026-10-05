@@ -1,0 +1,20 @@
+2026-10-05 20:10:38 [INFO] research.exp.EXP-000003: === Initializing Experiment: EXP-000003 (phase0-fault-tolerance-verification) ===
+2026-10-05 20:10:38 [INFO] research.exp.EXP-000003: Hypothesis: The research harness preserves full failure diagnostics, execution logs, and environment metadata without data loss upon workload abort.
+2026-10-05 20:10:38 [INFO] research.exp.EXP-000003: Objective: Verify fault tolerance, state transition to FAILED, error capture, and stack trace persistence.
+2026-10-05 20:10:38 [INFO] research.exp.EXP-000003: Profiling hardware and software environment...
+2026-10-05 20:10:38 [INFO] research.exp.EXP-000003: Experiment record registered in status: CREATED
+2026-10-05 20:10:38 [INFO] research.exp.EXP-000003: Lifecycle transitioned to RUNNING at 2026-10-05T20:10:38.824969+00:00
+2026-10-05 20:10:38 [INFO] research.exp.EXP-000003: Initializing execution engine...
+2026-10-05 20:10:38 [INFO] research.exp.EXP-000003: Loading model weights / specification...
+2026-10-05 20:10:38 [INFO] research.exp.EXP-000003: Model loaded: {'model_identifier': 'synthetic-baseline-model-v0', 'revision': 'rev-phase0-001', 'parameter_count': 1000000, 'digest': 'eb6754225ffd434b5e0f9be25bd551a5d16abae67abe303249d6a45fafa672d7', 'load_time_seconds': 0.010099}
+2026-10-05 20:10:38 [INFO] research.exp.EXP-000003: Executing workload 'synthetic_matrix' with seed=42...
+2026-10-05 20:10:38 [ERROR] research.exp.EXP-000003: Experiment FAILED: EngineExecutionFailure: Host out of memory simulation during tensor matrix multiplication
+2026-10-05 20:10:38 [ERROR] research.exp.EXP-000003: Traceback (most recent call last):
+  File "/home/user/aiagent/runtime/runner/runner.py", line 164, in run
+    workload_res = active_engine.execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/aiagent/engines/mock_engine.py", line 49, in execute
+    raise RuntimeError(f"EngineExecutionFailure: {error_msg}")
+RuntimeError: EngineExecutionFailure: Host out of memory simulation during tensor matrix multiplication
+
+2026-10-05 20:10:38 [INFO] research.exp.EXP-000003: Flushing execution logs...

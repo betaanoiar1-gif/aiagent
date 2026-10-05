@@ -1,0 +1,16 @@
+{
+  "benchmark_id": "BENCH-001",
+  "name": "synthetic_matrix_baseline",
+  "description": "Baseline deterministic computational matrix transformation for harness and profiler verification.",
+  "workload_type": "synthetic_matrix",
+  "default_params": {
+    "iterations": 2500,
+    "matrix_size": 64
+  },
+  "metrics_to_track": [
+    "time.wall_clock_seconds",
+    "cpu.cpu_percent_mean",
+    "memory.peak_rss_bytes",
+    "disk.artifacts_bytes"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "cpu": {
+    "cpu_percent_mean": 0.0,
+    "cpu_percent_peak": 0.0,
+    "system_time_seconds": 0.0,
+    "user_time_seconds": 0.0
+  },
+  "disk": {
+    "artifacts_bytes": 27066,
+    "delta_free_bytes": 20480,
+    "end_free_bytes": 20677910528,
+    "start_free_bytes": 20677931008
+  },
+  "gpu": {
+    "delta_vram_bytes": null,
+    "peak_vram_bytes": null,
+    "reason": "nvidia-smi not found; accelerator telemetry unavailable on this host",
+    "status": "unavailable",
+    "utilization_percent_mean": null,
+    "utilization_percent_peak": null,
+    "vram_end_bytes": null,
+    "vram_start_bytes": null
+  },
+  "memory": {
+    "delta_rss_bytes": 94208,
+    "end_rss_bytes": 22970368,
+    "peak_rss_bytes": 22876160,
+    "start_rss_bytes": 22876160,
+    "system_ram_percent_end": 6.5,
+    "system_ram_percent_peak": 6.5,
+    "system_ram_percent_start": 6.5
+  },
+  "sample_count": 1,
+  "time": {
+    "inference_seconds": 0.004757,
+    "model_load_seconds": 0.010083,
+    "overhead_seconds": 0.001461,
+    "post_process_seconds": 0.0,
+    "pre_process_seconds": 0.0,
+    "wall_clock_seconds": 0.013908
+  },
+  "workload_metrics": {
+    "accumulator_sum": 2.526616,
+    "artifact_bytes": 12301,
+    "artifact_path": "research/experiments/EXP-000001/outputs/synthetic_feature_map.ppm",
+    "iterations_completed": 2500,
+    "manifest_path": "research/experiments/EXP-000001/outputs/output_manifest.json",
+    "matrix_size": 64,
+    "output_sha256": "34705c110a83d134144b4d48c8b50de073926423136ea173bfe1ae903da80ef2",
+    "status": "COMPLETED"
+  }
+}

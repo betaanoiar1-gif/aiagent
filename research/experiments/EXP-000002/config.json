@@ -1,0 +1,23 @@
+{
+  "experiment_id": null,
+  "experiment_name": "phase0-baseline-determinism-run1",
+  "hypothesis": "A pseudo-random synthetic workload executed under seed 42 produces deterministic, bitwise reproducible artifacts across repeated runs.",
+  "input_reference": {},
+  "model_identifier": "synthetic-baseline-model-v0",
+  "model_revision": "rev-phase0-001",
+  "notes": "Reproduction run of experiment 'EXP-000001'. Original commit: 52b32951531347b2c1000a85aa6b343e6f5578a4. Initial baseline trial for Phase 0 research foundation verification.",
+  "objective": "Establish baseline execution telemetry, resource monitoring benchmarks, and artifact layout for Phase 0 validation.",
+  "output_reference": {},
+  "random_seed": 42,
+  "tags": [
+    "phase0",
+    "baseline",
+    "determinism",
+    "reproducibility"
+  ],
+  "workload_params": {
+    "iterations": 2500,
+    "matrix_size": 64
+  },
+  "workload_type": "synthetic_matrix"
+}
