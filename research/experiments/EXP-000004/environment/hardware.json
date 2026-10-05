@@ -1,0 +1,140 @@
+{
+  "compute_capability": {
+    "reason": "No GPU detected; compute capability unavailable",
+    "status": "unavailable",
+    "value": null
+  },
+  "cpu_cores_logical": {
+    "reason": null,
+    "status": "available",
+    "value": 2
+  },
+  "cpu_cores_physical": {
+    "reason": null,
+    "status": "available",
+    "value": 1
+  },
+  "cpu_model": {
+    "reason": null,
+    "status": "available",
+    "value": "Intel(R) Xeon(R) Processor @ 2.60GHz"
+  },
+  "cuda_version": {
+    "reason": "CUDA compiler/toolkit (nvcc) not found in system PATH",
+    "status": "unavailable",
+    "value": null
+  },
+  "disk_capacity_bytes": {
+    "reason": null,
+    "status": "available",
+    "value": 21834924032
+  },
+  "disk_free_bytes": {
+    "reason": null,
+    "status": "available",
+    "value": 20677644288
+  },
+  "driver_version": {
+    "reason": "No GPU detected; NVIDIA driver is not loaded",
+    "status": "unavailable",
+    "value": null
+  },
+  "gpu_architecture": {
+    "reason": "No GPU detected; GPU architecture unavailable",
+    "status": "unavailable",
+    "value": null
+  },
+  "gpu_count": {
+    "reason": null,
+    "status": "available",
+    "value": 0
+  },
+  "gpu_name": {
+    "reason": "No NVIDIA GPU detected on this host (nvidia-smi not in PATH and no driver device node)",
+    "status": "unavailable",
+    "value": null
+  },
+  "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+  "host_architecture": {
+    "reason": null,
+    "status": "available",
+    "value": "x86_64"
+  },
+  "kernel_version": {
+    "reason": null,
+    "status": "available",
+    "value": "6.1.158+"
+  },
+  "os_name": {
+    "reason": null,
+    "status": "available",
+    "value": "Linux"
+  },
+  "os_release": {
+    "reason": null,
+    "status": "available",
+    "value": "6.1.158+"
+  },
+  "python_version": {
+    "reason": null,
+    "status": "available",
+    "value": "3.11.2"
+  },
+  "pytorch_version": {
+    "reason": "PyTorch (torch) is not installed in the current Python environment",
+    "status": "unavailable",
+    "value": null
+  },
+  "ram_available_bytes": {
+    "reason": null,
+    "status": "available",
+    "value": 3864489984
+  },
+  "ram_total_bytes": {
+    "reason": null,
+    "status": "available",
+    "value": 4131278848
+  },
+  "relevant_runtimes": {
+    "NumPy": {
+      "reason": "NumPy (numpy) is not installed",
+      "status": "unavailable",
+      "value": null
+    },
+    "ONNX Runtime": {
+      "reason": "ONNX Runtime (onnxruntime) is not installed",
+      "status": "unavailable",
+      "value": null
+    },
+    "SciPy": {
+      "reason": "SciPy (scipy) is not installed",
+      "status": "unavailable",
+      "value": null
+    },
+    "TensorRT": {
+      "reason": "TensorRT (tensorrt) is not installed",
+      "status": "unavailable",
+      "value": null
+    },
+    "Triton": {
+      "reason": "Triton (triton) is not installed",
+      "status": "unavailable",
+      "value": null
+    },
+    "psutil": {
+      "reason": null,
+      "status": "available",
+      "value": "7.2.2"
+    }
+  },
+  "vram_available_bytes": {
+    "reason": "No GPU detected; VRAM available cannot be probed",
+    "status": "unavailable",
+    "value": null
+  },
+  "vram_total_bytes": {
+    "reason": "No GPU detected; VRAM total cannot be probed",
+    "status": "unavailable",
+    "value": null
+  }
+}

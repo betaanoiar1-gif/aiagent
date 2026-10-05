@@ -1,0 +1,330 @@
+{
+  "artifacts": {
+    "config.json": {
+      "bytes": 878,
+      "path": "config.json",
+      "sha256": "bfc3ea78705cda55afd7009104c2802def6fa835f60a4a69d5033c6a8ed71300"
+    },
+    "environment/hardware.json": {
+      "bytes": 3289,
+      "path": "environment/hardware.json",
+      "sha256": "73f6e6fde9d36a6568554234b45f576f7fbc818d0da8d0cb2989459e62555222"
+    },
+    "environment/software.json": {
+      "bytes": 1262,
+      "path": "environment/software.json",
+      "sha256": "c34266021aa91acec042f57b50e9a3b6852d8f53eb95ff6c2544d03fe82b9a20"
+    },
+    "logs/execution.log": {
+      "bytes": 3048,
+      "path": "logs/execution.log",
+      "sha256": "4de1f619f8ebedc95faa3e369208dab6a4a4c6b1e402f7a218c7677ee7cd4010"
+    },
+    "metrics.json": {
+      "bytes": 1117,
+      "path": "metrics.json",
+      "sha256": "af5b358f3ed49c943f111f452103471ff36438e84e10a2ad7107a6f1567d2daa"
+    },
+    "report.md": {
+      "bytes": 5069,
+      "path": "report.md",
+      "sha256": "32cc812232eb6453eb02b018032740f81aa8b7a41de9d29d784a5f75d8d7762f"
+    }
+  },
+  "configuration": {
+    "experiment_id": null,
+    "experiment_name": "phase1-image-baseline-env-probe",
+    "hypothesis": "Validates whether current host possesses the physical GPU, VRAM, and CUDA runtime necessary to run unquantized Stable Diffusion v1.5.",
+    "input_reference": {},
+    "model_identifier": "runwayml/stable-diffusion-v1-5",
+    "model_revision": "v1-5-pruned-emaonly",
+    "notes": "Environment capability verification for Stable Diffusion v1.5.",
+    "objective": "Empirical host capability verification for image baseline generation.",
+    "output_reference": {},
+    "random_seed": 101,
+    "tags": [
+      "phase1",
+      "baseline",
+      "image",
+      "environment_probe"
+    ],
+    "workload_params": {
+      "model_identifier": "runwayml/stable-diffusion-v1-5",
+      "prompt_id": "I01",
+      "resolution": [
+        512,
+        512
+      ],
+      "steps": 50
+    },
+    "workload_type": "image_baseline_inference"
+  },
+  "decision": "FAIL",
+  "duration_seconds": 0.01234,
+  "end_time": "2026-10-05T20:23:47.438425+00:00",
+  "experiment_id": "EXP-000004",
+  "experiment_name": "phase1-image-baseline-env-probe",
+  "failure_reason": "EnvironmentHardwarePrerequisiteError: Host environment cannot execute baseline model 'runwayml/stable-diffusion-v1-5'. Discovered Deficiencies: [Missing physical GPU: detected 0 GPUs, minimum required is 1. | CUDA compiler/runtime unavailable: CUDA compiler/toolkit (nvcc) not found in system PATH. | Insufficient host system RAM: detected 3.85 GB, minimum required is 8.0 GB.]. Per Phase 1 research protocol, CPU-only generation is prohibited because it cannot measure VRAM or GPU compute profile. Execution aborted to preserve empirical validity.",
+  "git_branch": "arena/32c43085-aiagent",
+  "git_commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+  "git_is_dirty": true,
+  "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+  "hardware_profile": {
+    "compute_capability": {
+      "reason": "No GPU detected; compute capability unavailable",
+      "status": "unavailable",
+      "value": null
+    },
+    "cpu_cores_logical": {
+      "reason": null,
+      "status": "available",
+      "value": 2
+    },
+    "cpu_cores_physical": {
+      "reason": null,
+      "status": "available",
+      "value": 1
+    },
+    "cpu_model": {
+      "reason": null,
+      "status": "available",
+      "value": "Intel(R) Xeon(R) Processor @ 2.60GHz"
+    },
+    "cuda_version": {
+      "reason": "CUDA compiler/toolkit (nvcc) not found in system PATH",
+      "status": "unavailable",
+      "value": null
+    },
+    "disk_capacity_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 21834924032
+    },
+    "disk_free_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 20677644288
+    },
+    "driver_version": {
+      "reason": "No GPU detected; NVIDIA driver is not loaded",
+      "status": "unavailable",
+      "value": null
+    },
+    "gpu_architecture": {
+      "reason": "No GPU detected; GPU architecture unavailable",
+      "status": "unavailable",
+      "value": null
+    },
+    "gpu_count": {
+      "reason": null,
+      "status": "available",
+      "value": 0
+    },
+    "gpu_name": {
+      "reason": "No NVIDIA GPU detected on this host (nvidia-smi not in PATH and no driver device node)",
+      "status": "unavailable",
+      "value": null
+    },
+    "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+    "host_architecture": {
+      "reason": null,
+      "status": "available",
+      "value": "x86_64"
+    },
+    "kernel_version": {
+      "reason": null,
+      "status": "available",
+      "value": "6.1.158+"
+    },
+    "os_name": {
+      "reason": null,
+      "status": "available",
+      "value": "Linux"
+    },
+    "os_release": {
+      "reason": null,
+      "status": "available",
+      "value": "6.1.158+"
+    },
+    "python_version": {
+      "reason": null,
+      "status": "available",
+      "value": "3.11.2"
+    },
+    "pytorch_version": {
+      "reason": "PyTorch (torch) is not installed in the current Python environment",
+      "status": "unavailable",
+      "value": null
+    },
+    "ram_available_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 3864489984
+    },
+    "ram_total_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 4131278848
+    },
+    "relevant_runtimes": {
+      "NumPy": {
+        "reason": "NumPy (numpy) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "ONNX Runtime": {
+        "reason": "ONNX Runtime (onnxruntime) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "SciPy": {
+        "reason": "SciPy (scipy) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "TensorRT": {
+        "reason": "TensorRT (tensorrt) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "Triton": {
+        "reason": "Triton (triton) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "psutil": {
+        "reason": null,
+        "status": "available",
+        "value": "7.2.2"
+      }
+    },
+    "vram_available_bytes": {
+      "reason": "No GPU detected; VRAM available cannot be probed",
+      "status": "unavailable",
+      "value": null
+    },
+    "vram_total_bytes": {
+      "reason": "No GPU detected; VRAM total cannot be probed",
+      "status": "unavailable",
+      "value": null
+    }
+  },
+  "hypothesis": "Validates whether current host possesses the physical GPU, VRAM, and CUDA runtime necessary to run unquantized Stable Diffusion v1.5.",
+  "input_reference": {},
+  "logs": {
+    "line_count": 20,
+    "log_file": "logs/execution.log"
+  },
+  "metrics": {
+    "cpu": {
+      "cpu_percent_mean": 0.0,
+      "cpu_percent_peak": 0.0,
+      "system_time_seconds": 0.0,
+      "user_time_seconds": 0.0
+    },
+    "disk": {
+      "artifacts_bytes": 14176,
+      "delta_free_bytes": 0,
+      "end_free_bytes": 20677619712,
+      "start_free_bytes": 20677619712
+    },
+    "gpu": {
+      "delta_vram_bytes": null,
+      "peak_vram_bytes": null,
+      "reason": "nvidia-smi not found; accelerator telemetry unavailable on this host",
+      "status": "unavailable",
+      "utilization_percent_mean": null,
+      "utilization_percent_peak": null,
+      "vram_end_bytes": null,
+      "vram_start_bytes": null
+    },
+    "memory": {
+      "delta_rss_bytes": 548864,
+      "end_rss_bytes": 23388160,
+      "peak_rss_bytes": 22839296,
+      "start_rss_bytes": 22839296,
+      "system_ram_percent_end": 6.5,
+      "system_ram_percent_peak": 6.5,
+      "system_ram_percent_start": 6.5
+    },
+    "sample_count": 1,
+    "time": {
+      "inference_seconds": 0.0,
+      "model_load_seconds": 0.0,
+      "overhead_seconds": 0.000878,
+      "post_process_seconds": 0.0,
+      "pre_process_seconds": 0.0,
+      "wall_clock_seconds": 0.012136
+    },
+    "workload_metrics": {}
+  },
+  "model_identifier": "runwayml/stable-diffusion-v1-5",
+  "model_revision": "v1-5-pruned-emaonly",
+  "notes": "Environment capability verification for Stable Diffusion v1.5.",
+  "objective": "Empirical host capability verification for image baseline generation.",
+  "output_reference": {},
+  "random_seed": 101,
+  "runtime_configuration": {
+    "allow_failure_recovery": true,
+    "deterministic_mode": true,
+    "log_level": "INFO",
+    "output_dir": "research/experiments",
+    "record_hardware": true,
+    "record_software": true,
+    "sample_interval_ms": 50,
+    "save_artifacts": true,
+    "timeout_seconds": 300.0
+  },
+  "software_environment": {
+    "environment_variables": {
+      "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games",
+      "SHELL": "/bin/bash",
+      "USER": "user"
+    },
+    "git_state": {
+      "branch": "arena/32c43085-aiagent",
+      "commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+      "commit_author": "arena-ai-coding-agent[bot]",
+      "commit_summary": "Initial commit",
+      "commit_timestamp": "2026-10-05T19:58:06+00:00",
+      "dirty_files": [
+        "M README.md",
+        "?? .gitignore",
+        "?? PHASE_0_REPORT.md",
+        "?? docs/",
+        "?? engines/",
+        "?? evaluation/",
+        "?? models/",
+        "?? research/",
+        "?? runtime/",
+        "?? scripts/",
+        "?? tests/"
+      ],
+      "is_dirty": true
+    },
+    "installed_packages": {
+      "Pygments": "2.21.0",
+      "iniconfig": "2.3.0",
+      "packaging": "26.3",
+      "pip": "23.0.1",
+      "pluggy": "1.6.0",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "setuptools": "66.1.1",
+      "wheel": "0.38.4"
+    },
+    "kernel_version": "6.1.158+",
+    "os_distro": "Debian GNU/Linux 12 (bookworm)",
+    "os_name": "Linux",
+    "os_release": "6.1.158+",
+    "python_executable": "/usr/bin/python3",
+    "python_implementation": "CPython",
+    "python_version": "3.11.2",
+    "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e"
+  },
+  "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e",
+  "stack_trace": "Traceback (most recent call last):\n  File \"/home/user/aiagent/runtime/runner/runner.py\", line 164, in run\n    workload_res = active_engine.execute(\n                   ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/aiagent/engines/baseline_engine.py\", line 101, in execute\n    raise EnvironmentHardwarePrerequisiteError(\nengines.baseline_engine.EnvironmentHardwarePrerequisiteError: EnvironmentHardwarePrerequisiteError: Host environment cannot execute baseline model 'runwayml/stable-diffusion-v1-5'. Discovered Deficiencies: [Missing physical GPU: detected 0 GPUs, minimum required is 1. | CUDA compiler/runtime unavailable: CUDA compiler/toolkit (nvcc) not found in system PATH. | Insufficient host system RAM: detected 3.85 GB, minimum required is 8.0 GB.]. Per Phase 1 research protocol, CPU-only generation is prohibited because it cannot measure VRAM or GPU compute profile. Execution aborted to preserve empirical validity.\n",
+  "start_time": "2026-10-05T20:23:47.424112+00:00",
+  "status": "FAILED",
+  "timestamp": "2026-10-05T20:23:47.422902+00:00"
+}

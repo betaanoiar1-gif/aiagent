@@ -1,0 +1,42 @@
+{
+  "model_identifier": "Lightricks/LTX-Video",
+  "modality": "video",
+  "category": "diffusion_transformer",
+  "architecture": {
+    "denoiser_type": "Causal Spatial-Temporal DiT",
+    "text_encoder": "T5-XXL (~4.8B parameters)",
+    "vae": "Causal 3D Spatio-Temporal VAE (32x spatial, 8x temporal patchified tokens)",
+    "parameter_count_breakdown": {
+      "dit": 2000000000,
+      "text_encoder": 4800000000,
+      "vae_3d": 150000000,
+      "total": 6950000000
+    }
+  },
+  "official_sources": {
+    "repository": "https://github.com/Lightricks/LTX-Video",
+    "huggingface": "https://huggingface.co/Lightricks/LTX-Video",
+    "paper": "LTX-Video: High-Resolution Real-Time Video Latent Diffusion Models (Lightricks, 2024)"
+  },
+  "checkpoint": {
+    "filename": "ltx-video-2b-v0.9.safetensors",
+    "precision": "bfloat16"
+  },
+  "license": "Lightricks Community License / Open Access",
+  "official_claims": {
+    "supported_resolutions": ["768x512", "704x480", "1216x704"],
+    "supported_frames": "Divisible by 8 + 1 (e.g. 121, 161, 257 frames)",
+    "default_fps": 24,
+    "default_duration_seconds": 5.0,
+    "default_inference_steps": 50,
+    "memory_minimum_vram": "8 GB (with CPU offload / pipeline offload)",
+    "memory_recommended_vram": "16-24 GB (bfloat16 full resident)",
+    "latency_rtx4090_768x512": "20-30 seconds (121 frames at 24 fps, near real-time)"
+  },
+  "dependencies": [
+    "torch>=2.4.0",
+    "diffusers>=0.31.0",
+    "transformers>=4.45.0",
+    "sentencepiece"
+  ]
+}

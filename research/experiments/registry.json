@@ -44,7 +44,52 @@
       "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e",
       "status": "FAILED",
       "timestamp": "2026-10-05T20:10:38.822477+00:00"
+    },
+    {
+      "decision": "FAIL",
+      "duration_seconds": 0.01234,
+      "experiment_id": "EXP-000004",
+      "experiment_name": "phase1-image-baseline-env-probe",
+      "git_commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+      "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+      "hypothesis": "Validates whether current host possesses the physical GPU, VRAM, and CUDA runtime necessary to run unquantized Stable Diffusion v1.5.",
+      "model_identifier": "runwayml/stable-diffusion-v1-5",
+      "path": "research/experiments/EXP-000004",
+      "random_seed": 101,
+      "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e",
+      "status": "FAILED",
+      "timestamp": "2026-10-05T20:23:47.422902+00:00"
+    },
+    {
+      "decision": "FAIL",
+      "duration_seconds": 0.012649,
+      "experiment_id": "EXP-000005",
+      "experiment_name": "phase1-video-wan2.1-env-probe",
+      "git_commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+      "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+      "hypothesis": "Validates whether current host possesses the physical GPU, VRAM, and CUDA runtime necessary to run unquantized Wan2.1-T2V-1.3B.",
+      "model_identifier": "Wan-AI/Wan2.1-T2V-1.3B",
+      "path": "research/experiments/EXP-000005",
+      "random_seed": 201,
+      "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e",
+      "status": "FAILED",
+      "timestamp": "2026-10-05T20:23:47.454419+00:00"
+    },
+    {
+      "decision": "FAIL",
+      "duration_seconds": 0.012438,
+      "experiment_id": "EXP-000006",
+      "experiment_name": "phase1-video-ltx-env-probe",
+      "git_commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+      "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+      "hypothesis": "Validates whether current host possesses the physical GPU, VRAM, and CUDA runtime necessary to run unquantized LTX-Video-2B.",
+      "model_identifier": "Lightricks/LTX-Video",
+      "path": "research/experiments/EXP-000006",
+      "random_seed": 201,
+      "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e",
+      "status": "FAILED",
+      "timestamp": "2026-10-05T20:23:47.486964+00:00"
     }
   ],
-  "last_index": 3
+  "last_index": 6
 }

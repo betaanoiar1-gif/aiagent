@@ -1,0 +1,49 @@
+{
+  "model_identifier": "Wan-AI/Wan2.1-T2V-1.3B",
+  "modality": "video",
+  "category": "diffusion_transformer",
+  "architecture": {
+    "denoiser_type": "Video Diffusion DiT (Flow Matching)",
+    "hidden_dimension": 1536,
+    "feedforward_dimension": 8960,
+    "attention_heads": 12,
+    "dit_layers": 30,
+    "text_encoder": "UMT5-XXL (~4.8B parameters)",
+    "vae": "3D Causal VAE (8x spatial, 4x temporal compression)",
+    "parameter_count_breakdown": {
+      "dit": 1300000000,
+      "text_encoder": 4800000000,
+      "vae_3d": 180000000,
+      "total": 6280000000
+    }
+  },
+  "official_sources": {
+    "repository": "https://github.com/Wan-Video/Wan2.1",
+    "huggingface": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B",
+    "paper": "Wan: Open and Advanced Large-Scale Video Generative Models (Wan-Team, 2025)"
+  },
+  "checkpoint": {
+    "filename": "Wan2.1-T2V-1.3B (multi-part safetensors)",
+    "precision": "bfloat16 / fp32"
+  },
+  "license": "Apache-2.0",
+  "official_claims": {
+    "supported_resolutions": ["832x480", "1280x720"],
+    "supported_frames": 81,
+    "default_fps": 16,
+    "default_duration_seconds": 5.0,
+    "default_inference_steps": 50,
+    "sample_shift": 8,
+    "sample_guide_scale": 6.0,
+    "memory_minimum_vram": "8.19 GB (with --offload_model True and --t5_cpu)",
+    "memory_recommended_vram": ">24 GB without offloading",
+    "latency_rtx4090_480p": "~4 minutes (~240s) for 5s video (81 frames)"
+  },
+  "dependencies": [
+    "torch>=2.4.0",
+    "diffusers>=0.31.0",
+    "transformers>=4.45.0",
+    "accelerate>=0.34.0",
+    "flash-attn"
+  ]
+}

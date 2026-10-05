@@ -1,0 +1,30 @@
+{
+  "experiment_id": null,
+  "experiment_name": "phase1-video-wan2.1-env-probe",
+  "hypothesis": "Validates whether current host possesses the physical GPU, VRAM, and CUDA runtime necessary to run unquantized Wan2.1-T2V-1.3B.",
+  "input_reference": {},
+  "model_identifier": "Wan-AI/Wan2.1-T2V-1.3B",
+  "model_revision": "main",
+  "notes": "Environment capability verification for Wan2.1-T2V-1.3B.",
+  "objective": "Empirical host capability verification for Wan2.1 video baseline generation.",
+  "output_reference": {},
+  "random_seed": 201,
+  "tags": [
+    "phase1",
+    "baseline",
+    "video",
+    "wan2.1",
+    "environment_probe"
+  ],
+  "workload_params": {
+    "frames": 81,
+    "model_identifier": "Wan-AI/Wan2.1-T2V-1.3B",
+    "prompt_id": "V01",
+    "resolution": [
+      832,
+      480
+    ],
+    "steps": 50
+  },
+  "workload_type": "video_baseline_inference"
+}

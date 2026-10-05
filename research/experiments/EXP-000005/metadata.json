@@ -1,0 +1,332 @@
+{
+  "artifacts": {
+    "config.json": {
+      "bytes": 872,
+      "path": "config.json",
+      "sha256": "d4b4489580d6950494c829454d3e26a54e666818b639898fb4d7e28ff1fe302c"
+    },
+    "environment/hardware.json": {
+      "bytes": 3289,
+      "path": "environment/hardware.json",
+      "sha256": "d39ad380484789a539e366bc657e24ab1cdfc24425f290976132024a461a2d8a"
+    },
+    "environment/software.json": {
+      "bytes": 1262,
+      "path": "environment/software.json",
+      "sha256": "c34266021aa91acec042f57b50e9a3b6852d8f53eb95ff6c2544d03fe82b9a20"
+    },
+    "logs/execution.log": {
+      "bytes": 3010,
+      "path": "logs/execution.log",
+      "sha256": "7faff922745a250622b3be11db9709af9148e384b976a03edde3013b84a2e9b7"
+    },
+    "metrics.json": {
+      "bytes": 1119,
+      "path": "metrics.json",
+      "sha256": "d007b61290add74eb94d9cba4a5fea1deadab2c122f242397687505a5714acad"
+    },
+    "report.md": {
+      "bytes": 5023,
+      "path": "report.md",
+      "sha256": "75aa85d20f1e9812742e2a2d87a297356b2a851cc4df35af496868f3723c295e"
+    }
+  },
+  "configuration": {
+    "experiment_id": null,
+    "experiment_name": "phase1-video-wan2.1-env-probe",
+    "hypothesis": "Validates whether current host possesses the physical GPU, VRAM, and CUDA runtime necessary to run unquantized Wan2.1-T2V-1.3B.",
+    "input_reference": {},
+    "model_identifier": "Wan-AI/Wan2.1-T2V-1.3B",
+    "model_revision": "main",
+    "notes": "Environment capability verification for Wan2.1-T2V-1.3B.",
+    "objective": "Empirical host capability verification for Wan2.1 video baseline generation.",
+    "output_reference": {},
+    "random_seed": 201,
+    "tags": [
+      "phase1",
+      "baseline",
+      "video",
+      "wan2.1",
+      "environment_probe"
+    ],
+    "workload_params": {
+      "frames": 81,
+      "model_identifier": "Wan-AI/Wan2.1-T2V-1.3B",
+      "prompt_id": "V01",
+      "resolution": [
+        832,
+        480
+      ],
+      "steps": 50
+    },
+    "workload_type": "video_baseline_inference"
+  },
+  "decision": "FAIL",
+  "duration_seconds": 0.012649,
+  "end_time": "2026-10-05T20:23:47.471092+00:00",
+  "experiment_id": "EXP-000005",
+  "experiment_name": "phase1-video-wan2.1-env-probe",
+  "failure_reason": "EnvironmentHardwarePrerequisiteError: Host environment cannot execute baseline model 'Wan-AI/Wan2.1-T2V-1.3B'. Discovered Deficiencies: [Missing physical GPU: detected 0 GPUs, minimum required is 1. | CUDA compiler/runtime unavailable: CUDA compiler/toolkit (nvcc) not found in system PATH. | Insufficient host system RAM: detected 3.85 GB, minimum required is 16.0 GB.]. Per Phase 1 research protocol, CPU-only generation is prohibited because it cannot measure VRAM or GPU compute profile. Execution aborted to preserve empirical validity.",
+  "git_branch": "arena/32c43085-aiagent",
+  "git_commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+  "git_is_dirty": true,
+  "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+  "hardware_profile": {
+    "compute_capability": {
+      "reason": "No GPU detected; compute capability unavailable",
+      "status": "unavailable",
+      "value": null
+    },
+    "cpu_cores_logical": {
+      "reason": null,
+      "status": "available",
+      "value": 2
+    },
+    "cpu_cores_physical": {
+      "reason": null,
+      "status": "available",
+      "value": 1
+    },
+    "cpu_model": {
+      "reason": null,
+      "status": "available",
+      "value": "Intel(R) Xeon(R) Processor @ 2.60GHz"
+    },
+    "cuda_version": {
+      "reason": "CUDA compiler/toolkit (nvcc) not found in system PATH",
+      "status": "unavailable",
+      "value": null
+    },
+    "disk_capacity_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 21834924032
+    },
+    "disk_free_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 20677595136
+    },
+    "driver_version": {
+      "reason": "No GPU detected; NVIDIA driver is not loaded",
+      "status": "unavailable",
+      "value": null
+    },
+    "gpu_architecture": {
+      "reason": "No GPU detected; GPU architecture unavailable",
+      "status": "unavailable",
+      "value": null
+    },
+    "gpu_count": {
+      "reason": null,
+      "status": "available",
+      "value": 0
+    },
+    "gpu_name": {
+      "reason": "No NVIDIA GPU detected on this host (nvidia-smi not in PATH and no driver device node)",
+      "status": "unavailable",
+      "value": null
+    },
+    "hardware_fingerprint": "hwfp_10710551592e4e416e9ccab19449a7ac",
+    "host_architecture": {
+      "reason": null,
+      "status": "available",
+      "value": "x86_64"
+    },
+    "kernel_version": {
+      "reason": null,
+      "status": "available",
+      "value": "6.1.158+"
+    },
+    "os_name": {
+      "reason": null,
+      "status": "available",
+      "value": "Linux"
+    },
+    "os_release": {
+      "reason": null,
+      "status": "available",
+      "value": "6.1.158+"
+    },
+    "python_version": {
+      "reason": null,
+      "status": "available",
+      "value": "3.11.2"
+    },
+    "pytorch_version": {
+      "reason": "PyTorch (torch) is not installed in the current Python environment",
+      "status": "unavailable",
+      "value": null
+    },
+    "ram_available_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 3863973888
+    },
+    "ram_total_bytes": {
+      "reason": null,
+      "status": "available",
+      "value": 4131278848
+    },
+    "relevant_runtimes": {
+      "NumPy": {
+        "reason": "NumPy (numpy) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "ONNX Runtime": {
+        "reason": "ONNX Runtime (onnxruntime) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "SciPy": {
+        "reason": "SciPy (scipy) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "TensorRT": {
+        "reason": "TensorRT (tensorrt) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "Triton": {
+        "reason": "Triton (triton) is not installed",
+        "status": "unavailable",
+        "value": null
+      },
+      "psutil": {
+        "reason": null,
+        "status": "available",
+        "value": "7.2.2"
+      }
+    },
+    "vram_available_bytes": {
+      "reason": "No GPU detected; VRAM available cannot be probed",
+      "status": "unavailable",
+      "value": null
+    },
+    "vram_total_bytes": {
+      "reason": "No GPU detected; VRAM total cannot be probed",
+      "status": "unavailable",
+      "value": null
+    }
+  },
+  "hypothesis": "Validates whether current host possesses the physical GPU, VRAM, and CUDA runtime necessary to run unquantized Wan2.1-T2V-1.3B.",
+  "input_reference": {},
+  "logs": {
+    "line_count": 20,
+    "log_file": "logs/execution.log"
+  },
+  "metrics": {
+    "cpu": {
+      "cpu_percent_mean": 2488.7,
+      "cpu_percent_peak": 2488.7,
+      "system_time_seconds": 0.0,
+      "user_time_seconds": 0.01
+    },
+    "disk": {
+      "artifacts_bytes": 14114,
+      "delta_free_bytes": 0,
+      "end_free_bytes": 20677574656,
+      "start_free_bytes": 20677574656
+    },
+    "gpu": {
+      "delta_vram_bytes": null,
+      "peak_vram_bytes": null,
+      "reason": "nvidia-smi not found; accelerator telemetry unavailable on this host",
+      "status": "unavailable",
+      "utilization_percent_mean": null,
+      "utilization_percent_peak": null,
+      "vram_end_bytes": null,
+      "vram_start_bytes": null
+    },
+    "memory": {
+      "delta_rss_bytes": 0,
+      "end_rss_bytes": 23388160,
+      "peak_rss_bytes": 23388160,
+      "start_rss_bytes": 23388160,
+      "system_ram_percent_end": 6.5,
+      "system_ram_percent_peak": 6.5,
+      "system_ram_percent_start": 6.5
+    },
+    "sample_count": 1,
+    "time": {
+      "inference_seconds": 0.0,
+      "model_load_seconds": 0.0,
+      "overhead_seconds": 0.000793,
+      "post_process_seconds": 0.0,
+      "pre_process_seconds": 0.0,
+      "wall_clock_seconds": 0.012404
+    },
+    "workload_metrics": {}
+  },
+  "model_identifier": "Wan-AI/Wan2.1-T2V-1.3B",
+  "model_revision": "main",
+  "notes": "Environment capability verification for Wan2.1-T2V-1.3B.",
+  "objective": "Empirical host capability verification for Wan2.1 video baseline generation.",
+  "output_reference": {},
+  "random_seed": 201,
+  "runtime_configuration": {
+    "allow_failure_recovery": true,
+    "deterministic_mode": true,
+    "log_level": "INFO",
+    "output_dir": "research/experiments",
+    "record_hardware": true,
+    "record_software": true,
+    "sample_interval_ms": 50,
+    "save_artifacts": true,
+    "timeout_seconds": 300.0
+  },
+  "software_environment": {
+    "environment_variables": {
+      "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games",
+      "SHELL": "/bin/bash",
+      "USER": "user"
+    },
+    "git_state": {
+      "branch": "arena/32c43085-aiagent",
+      "commit": "52b32951531347b2c1000a85aa6b343e6f5578a4",
+      "commit_author": "arena-ai-coding-agent[bot]",
+      "commit_summary": "Initial commit",
+      "commit_timestamp": "2026-10-05T19:58:06+00:00",
+      "dirty_files": [
+        "M README.md",
+        "?? .gitignore",
+        "?? PHASE_0_REPORT.md",
+        "?? docs/",
+        "?? engines/",
+        "?? evaluation/",
+        "?? models/",
+        "?? research/",
+        "?? runtime/",
+        "?? scripts/",
+        "?? tests/"
+      ],
+      "is_dirty": true
+    },
+    "installed_packages": {
+      "Pygments": "2.21.0",
+      "iniconfig": "2.3.0",
+      "packaging": "26.3",
+      "pip": "23.0.1",
+      "pluggy": "1.6.0",
+      "psutil": "7.2.2",
+      "pytest": "9.1.1",
+      "setuptools": "66.1.1",
+      "wheel": "0.38.4"
+    },
+    "kernel_version": "6.1.158+",
+    "os_distro": "Debian GNU/Linux 12 (bookworm)",
+    "os_name": "Linux",
+    "os_release": "6.1.158+",
+    "python_executable": "/usr/bin/python3",
+    "python_implementation": "CPython",
+    "python_version": "3.11.2",
+    "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e"
+  },
+  "software_fingerprint": "swfp_7b538c3ae126068d119b028bc8cee39e",
+  "stack_trace": "Traceback (most recent call last):\n  File \"/home/user/aiagent/runtime/runner/runner.py\", line 164, in run\n    workload_res = active_engine.execute(\n                   ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/aiagent/engines/baseline_engine.py\", line 101, in execute\n    raise EnvironmentHardwarePrerequisiteError(\nengines.baseline_engine.EnvironmentHardwarePrerequisiteError: EnvironmentHardwarePrerequisiteError: Host environment cannot execute baseline model 'Wan-AI/Wan2.1-T2V-1.3B'. Discovered Deficiencies: [Missing physical GPU: detected 0 GPUs, minimum required is 1. | CUDA compiler/runtime unavailable: CUDA compiler/toolkit (nvcc) not found in system PATH. | Insufficient host system RAM: detected 3.85 GB, minimum required is 16.0 GB.]. Per Phase 1 research protocol, CPU-only generation is prohibited because it cannot measure VRAM or GPU compute profile. Execution aborted to preserve empirical validity.\n",
+  "start_time": "2026-10-05T20:23:47.456632+00:00",
+  "status": "FAILED",
+  "timestamp": "2026-10-05T20:23:47.454419+00:00"
+}

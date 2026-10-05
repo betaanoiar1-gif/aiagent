@@ -1,0 +1,20 @@
+2026-10-05 20:23:47 [INFO] research.exp.EXP-000004: === Initializing Experiment: EXP-000004 (phase1-image-baseline-env-probe) ===
+2026-10-05 20:23:47 [INFO] research.exp.EXP-000004: Hypothesis: Validates whether current host possesses the physical GPU, VRAM, and CUDA runtime necessary to run unquantized Stable Diffusion v1.5.
+2026-10-05 20:23:47 [INFO] research.exp.EXP-000004: Objective: Empirical host capability verification for image baseline generation.
+2026-10-05 20:23:47 [INFO] research.exp.EXP-000004: Profiling hardware and software environment...
+2026-10-05 20:23:47 [INFO] research.exp.EXP-000004: Experiment record registered in status: CREATED
+2026-10-05 20:23:47 [INFO] research.exp.EXP-000004: Lifecycle transitioned to RUNNING at 2026-10-05T20:23:47.424112+00:00
+2026-10-05 20:23:47 [INFO] research.exp.EXP-000004: Initializing execution engine...
+2026-10-05 20:23:47 [INFO] research.exp.EXP-000004: Loading model weights / specification...
+2026-10-05 20:23:47 [INFO] research.exp.EXP-000004: Model loaded: {'model_identifier': 'runwayml/stable-diffusion-v1-5', 'revision': 'v1-5-pruned-emaonly', 'parameter_count': 1000000, 'digest': '6b80fc3f439ecd72da5c3e2be68fe3357a6dfd26bbbe2de9385ed8ffbbcc6ea2', 'load_time_seconds': 0.010093}
+2026-10-05 20:23:47 [INFO] research.exp.EXP-000004: Executing workload 'image_baseline_inference' with seed=101...
+2026-10-05 20:23:47 [ERROR] research.exp.EXP-000004: Experiment FAILED: EnvironmentHardwarePrerequisiteError: Host environment cannot execute baseline model 'runwayml/stable-diffusion-v1-5'. Discovered Deficiencies: [Missing physical GPU: detected 0 GPUs, minimum required is 1. | CUDA compiler/runtime unavailable: CUDA compiler/toolkit (nvcc) not found in system PATH. | Insufficient host system RAM: detected 3.85 GB, minimum required is 8.0 GB.]. Per Phase 1 research protocol, CPU-only generation is prohibited because it cannot measure VRAM or GPU compute profile. Execution aborted to preserve empirical validity.
+2026-10-05 20:23:47 [ERROR] research.exp.EXP-000004: Traceback (most recent call last):
+  File "/home/user/aiagent/runtime/runner/runner.py", line 164, in run
+    workload_res = active_engine.execute(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/aiagent/engines/baseline_engine.py", line 101, in execute
+    raise EnvironmentHardwarePrerequisiteError(
+engines.baseline_engine.EnvironmentHardwarePrerequisiteError: EnvironmentHardwarePrerequisiteError: Host environment cannot execute baseline model 'runwayml/stable-diffusion-v1-5'. Discovered Deficiencies: [Missing physical GPU: detected 0 GPUs, minimum required is 1. | CUDA compiler/runtime unavailable: CUDA compiler/toolkit (nvcc) not found in system PATH. | Insufficient host system RAM: detected 3.85 GB, minimum required is 8.0 GB.]. Per Phase 1 research protocol, CPU-only generation is prohibited because it cannot measure VRAM or GPU compute profile. Execution aborted to preserve empirical validity.
+
+2026-10-05 20:23:47 [INFO] research.exp.EXP-000004: Flushing execution logs...

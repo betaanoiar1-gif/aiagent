@@ -1,0 +1,41 @@
+{
+  "model_identifier": "runwayml/stable-diffusion-v1-5",
+  "modality": "image",
+  "category": "latent_diffusion",
+  "architecture": {
+    "denoiser_type": "2D U-Net with Spatial Cross-Attention",
+    "text_encoder": "OpenAI CLIP ViT-L/14 (123M parameters)",
+    "vae": "AutoencoderKL (8x spatial downsampling)",
+    "parameter_count_breakdown": {
+      "unet": 860000000,
+      "text_encoder": 123000000,
+      "vae": 84000000,
+      "total": 1067000000
+    }
+  },
+  "official_sources": {
+    "repository": "https://github.com/runwayml/stable-diffusion",
+    "huggingface": "https://huggingface.co/runwayml/stable-diffusion-v1-5",
+    "paper": "High-Resolution Image Synthesis with Latent Diffusion Models (Rombach et al., CVPR 2022)"
+  },
+  "checkpoint": {
+    "filename": "v1-5-pruned-emaonly.safetensors",
+    "size_bytes": 4265147576,
+    "precision": "fp16 / fp32"
+  },
+  "license": "CreativeML Open RAIL-M",
+  "official_claims": {
+    "native_resolution": [512, 512],
+    "default_steps": 50,
+    "recommended_guidance_scale": 7.5,
+    "memory_minimum_vram": "4 GB (fp16 with attention slicing)",
+    "memory_recommended_vram": "8 GB (fp16 without slicing)",
+    "latency_rtx3090_fp16": "~2.5 seconds (50 steps DDIM, 512x512)"
+  },
+  "dependencies": [
+    "torch>=2.0.0",
+    "diffusers>=0.20.0",
+    "transformers>=4.30.0",
+    "accelerate>=0.20.0"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "experiment_id": null,
+  "experiment_name": "phase1-image-baseline-env-probe",
+  "hypothesis": "Validates whether current host possesses the physical GPU, VRAM, and CUDA runtime necessary to run unquantized Stable Diffusion v1.5.",
+  "input_reference": {},
+  "model_identifier": "runwayml/stable-diffusion-v1-5",
+  "model_revision": "v1-5-pruned-emaonly",
+  "notes": "Environment capability verification for Stable Diffusion v1.5.",
+  "objective": "Empirical host capability verification for image baseline generation.",
+  "output_reference": {},
+  "random_seed": 101,
+  "tags": [
+    "phase1",
+    "baseline",
+    "image",
+    "environment_probe"
+  ],
+  "workload_params": {
+    "model_identifier": "runwayml/stable-diffusion-v1-5",
+    "prompt_id": "I01",
+    "resolution": [
+      512,
+      512
+    ],
+    "steps": 50
+  },
+  "workload_type": "image_baseline_inference"
+}

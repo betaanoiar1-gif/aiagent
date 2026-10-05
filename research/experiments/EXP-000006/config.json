@@ -1,0 +1,30 @@
+{
+  "experiment_id": null,
+  "experiment_name": "phase1-video-ltx-env-probe",
+  "hypothesis": "Validates whether current host possesses the physical GPU, VRAM, and CUDA runtime necessary to run unquantized LTX-Video-2B.",
+  "input_reference": {},
+  "model_identifier": "Lightricks/LTX-Video",
+  "model_revision": "v0.9.5",
+  "notes": "Environment capability verification for Lightricks/LTX-Video.",
+  "objective": "Empirical host capability verification for LTX-Video baseline generation.",
+  "output_reference": {},
+  "random_seed": 201,
+  "tags": [
+    "phase1",
+    "baseline",
+    "video",
+    "ltx_video",
+    "environment_probe"
+  ],
+  "workload_params": {
+    "frames": 121,
+    "model_identifier": "Lightricks/LTX-Video",
+    "prompt_id": "V01",
+    "resolution": [
+      768,
+      512
+    ],
+    "steps": 50
+  },
+  "workload_type": "video_baseline_inference"
+}

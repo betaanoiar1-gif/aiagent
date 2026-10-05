@@ -1,0 +1,179 @@
+{
+  "suite_id": "PROMPT-SUITE-V1",
+  "version": "1.0.0",
+  "description": "Standardized baseline evaluation prompt dataset for Phase 1 image and video generation measurement.",
+  "image_prompts": [
+    {
+      "id": "I01",
+      "category": "simple object",
+      "prompt": "A single red ceramic coffee mug resting on a clean wooden table, soft morning sunlight casting a subtle shadow, studio still life photography.",
+      "seed": 101,
+      "aspect_ratio": "1:1",
+      "recommended_resolution": [512, 512]
+    },
+    {
+      "id": "I02",
+      "category": "portrait",
+      "prompt": "Close-up portrait of an elderly fisherman with weathered skin, deep wrinkles, kind hazel eyes, and a gray beard, wearing a yellow raincoat, natural diffused overcast light, 85mm lens photography.",
+      "seed": 102,
+      "aspect_ratio": "1:1",
+      "recommended_resolution": [512, 512]
+    },
+    {
+      "id": "I03",
+      "category": "human hands",
+      "prompt": "Detailed view of two artisan hands carefully sculpting wet clay on a rotating pottery wheel, visible fingerprints, clay splatter, natural workshop illumination.",
+      "seed": 103,
+      "aspect_ratio": "1:1",
+      "recommended_resolution": [512, 512]
+    },
+    {
+      "id": "I04",
+      "category": "landscape",
+      "prompt": "Vast panoramic landscape of snow-capped alpine mountains reflected in a calm crystal-clear glacial lake during golden hour, pine forest along the shoreline.",
+      "seed": 104,
+      "aspect_ratio": "1:1",
+      "recommended_resolution": [512, 512]
+    },
+    {
+      "id": "I05",
+      "category": "architecture",
+      "prompt": "Exterior architectural view of a minimalist modern concrete house nestled in a green hillside, large glass windows, clean geometric lines, twilight lighting.",
+      "seed": 105,
+      "aspect_ratio": "1:1",
+      "recommended_resolution": [512, 512]
+    },
+    {
+      "id": "I06",
+      "category": "multiple subjects",
+      "prompt": "Three scientists in white lab coats collaborating around an illuminated holographic workbench, diverse ages, expressive gestures, modern clean laboratory interior.",
+      "seed": 106,
+      "aspect_ratio": "1:1",
+      "recommended_resolution": [512, 512]
+    },
+    {
+      "id": "I07",
+      "category": "complex scene",
+      "prompt": "A bustling Mediterranean outdoor marketplace filled with fresh fruit stalls, colorful awnings, vendors interacting with customers, cobblestone ground, dappled sun through trees.",
+      "seed": 107,
+      "aspect_ratio": "1:1",
+      "recommended_resolution": [512, 512]
+    },
+    {
+      "id": "I08",
+      "category": "lighting-heavy scene",
+      "prompt": "A dimly lit jazz club with a solo saxophone player under a harsh blue and amber rim light, atmospheric cigarette smoke swirls, dramatic chiaroscuro contrast.",
+      "seed": 108,
+      "aspect_ratio": "1:1",
+      "recommended_resolution": [512, 512]
+    },
+    {
+      "id": "I09",
+      "category": "text-heavy composition",
+      "prompt": "Vintage bookstore storefront with clear legible signage reading 'ANTIQUE BOOKS & MANUSCRIPTS' carved in gold serif letters on dark wood, book spines visible in window.",
+      "seed": 109,
+      "aspect_ratio": "1:1",
+      "recommended_resolution": [512, 512]
+    },
+    {
+      "id": "I10",
+      "category": "difficult composition",
+      "prompt": "Surrealistic composition of a transparent glass chessboard floating above a swirling ocean vortex, miniature chess pieces casting iridescent reflections, cloudy sunset horizon.",
+      "seed": 110,
+      "aspect_ratio": "1:1",
+      "recommended_resolution": [512, 512]
+    }
+  ],
+  "video_prompts": [
+    {
+      "id": "V01",
+      "category": "static scene",
+      "prompt": "A tranquil mountain cabin at dusk with gentle smoke slowly rising from the stone chimney, subtle wind rustling the pine needles, stationary camera shot.",
+      "seed": 201,
+      "duration_seconds": 5.0,
+      "fps": 24,
+      "recommended_resolution": [832, 480]
+    },
+    {
+      "id": "V02",
+      "category": "simple object movement",
+      "prompt": "A shiny silver pendulum ball swinging smoothly back and forth against a dark velvet background, crisp metallic reflections, steady pacing.",
+      "seed": 202,
+      "duration_seconds": 5.0,
+      "fps": 24,
+      "recommended_resolution": [832, 480]
+    },
+    {
+      "id": "V03",
+      "category": "human walking",
+      "prompt": "A woman in a long beige trench coat walking purposefully along a wet autumn city sidewalk away from camera, fallen leaves drifting, reflections in puddles.",
+      "seed": 203,
+      "duration_seconds": 5.0,
+      "fps": 24,
+      "recommended_resolution": [832, 480]
+    },
+    {
+      "id": "V04",
+      "category": "camera movement",
+      "prompt": "Smooth forward drone tracking shot flying low over ocean waves crashing onto a sandy beach, accelerating toward a distant lighthouse on a cliff during sunrise.",
+      "seed": 204,
+      "duration_seconds": 5.0,
+      "fps": 24,
+      "recommended_resolution": [832, 480]
+    },
+    {
+      "id": "V05",
+      "category": "multiple moving objects",
+      "prompt": "A busy city intersection at night viewed from an elevated angle, cars with red taillights and yellow headlights driving in multiple lanes, pedestrians crossing.",
+      "seed": 205,
+      "duration_seconds": 5.0,
+      "fps": 24,
+      "recommended_resolution": [832, 480]
+    },
+    {
+      "id": "V06",
+      "category": "environment motion",
+      "prompt": "A sudden torrential rainstorm sweeping over a dense tropical rainforest canopy, heavy raindrops splashing leaves, mist rising, thunderclouds rolling rapidly.",
+      "seed": 206,
+      "duration_seconds": 5.0,
+      "fps": 24,
+      "recommended_resolution": [832, 480]
+    },
+    {
+      "id": "V07",
+      "category": "human/object interaction",
+      "prompt": "Close-up of a barista's hands pouring steamed milk into an espresso cup, creating an intricate rosetta latte art pattern in smooth fluid motion.",
+      "seed": 207,
+      "duration_seconds": 5.0,
+      "fps": 24,
+      "recommended_resolution": [832, 480]
+    },
+    {
+      "id": "V08",
+      "category": "complex cinematic scene",
+      "prompt": "Cinematic tracking shot inside an ancient Egyptian tomb, an explorer holding a flickering torch revealing wall hieroglyphics and floating dust motes, dramatic shadows.",
+      "seed": 208,
+      "duration_seconds": 5.0,
+      "fps": 24,
+      "recommended_resolution": [832, 480]
+    },
+    {
+      "id": "V09",
+      "category": "difficult temporal consistency",
+      "prompt": "A young child wearing a red patterned sweater spinning in circles on a green lawn, background trees rotating past smoothly, clothing patterns remaining consistent.",
+      "seed": 209,
+      "duration_seconds": 5.0,
+      "fps": 24,
+      "recommended_resolution": [832, 480]
+    },
+    {
+      "id": "V10",
+      "category": "difficult motion",
+      "prompt": "A dynamic slow-motion capture of a cheetah sprinting at full speed across an open savanna, muscles flexing, dust kicking up behind paw impacts, camera tracking alongside.",
+      "seed": 210,
+      "duration_seconds": 5.0,
+      "fps": 24,
+      "recommended_resolution": [832, 480]
+    }
+  ]
+}
